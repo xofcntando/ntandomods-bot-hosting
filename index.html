@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ntandomods — Multi WhatsApp Bot Hosting for Render</title>
+  <meta name="description" content="One-click deploy Knightbot-MD & KnightBot-Mini WhatsApp bots to Render. Pair-code sessions, render.yaml blueprints, step-by-step guides and a deploy link generator — by Ntandomods." />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+
+  <div class="bg-fx"></div>
+  <div class="grid-fx"></div>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="brand">
+        <img src="assets/logo.png" alt="Ntandomods logo" />
+        <span class="brand-name">NTANDO<span>MODS</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#bots">Bots</a></li>
+        <li><a href="#deploy">Deploy</a></li>
+        <li><a href="#generator">Link Generator</a></li>
+        <li><a href="#env">Env Vars</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="https://github.com/mruniquehacker" target="_blank" rel="noopener" class="nav-cta">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        GitHub
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+  <header class="hero" id="home">
+    <div class="container">
+      <div class="hero-badge reveal visible">
+        <span class="pulse"></span>
+        2 bots · 1 click · Render-ready &middot; by Ntandomods
+      </div>
+      <h1 class="reveal visible">
+        Deploy <span class="grad">WhatsApp Bots</span> to Render<br />Without the Headache
+      </h1>
+      <p class="lead reveal visible">
+        A one-stop hosting hub for <strong>Knightbot-MD</strong> and <strong>KnightBot-Mini</strong> by
+        <strong>mruniquehacker</strong> — pair-code sessions, ready-made <code>render.yaml</code> blueprints,
+        copy-paste deploy links and step-by-step guides.
+      </p>
+      <div class="hero-actions reveal visible">
+        <a href="#bots" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0 0 20 10 10 0 0 0 0-20Zm0 1.5a8.5 8.5 0 1 1 0 17 8.5 8.5 0 0 1 0-17Zm-1 3.75v1.5h2V7.25h-2Zm0 3.25v6.25h2V10.5h-2Z"/></svg>
+          Choose a Bot
+        </a>
+        <a href="https://knight-bot-paircode.onrender.com" target="_blank" rel="noopener" class="btn btn-purple">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7 7h10a5 5 0 0 1 0 10H7A5 5 0 0 1 7 7Zm.5 2.5a2.5 2.5 0 0 0 0 5h2.3l-1.4-1.4 1.06-1.06L13 13.5l-4.54 4.46-1.06-1.06 1.4-1.4H7.5Z"/></svg>
+          Get Pair Code
+        </a>
+      </div>
+      <div class="hero-stats reveal visible d1">
+        <div class="stat">
+          <div class="num">2</div>
+          <div class="lbl">Deployable Bots</div>
+        </div>
+        <div class="stat">
+          <div class="num">9k+</div>
+          <div class="lbl">GitHub Stars</div>
+        </div>
+        <div class="stat">
+          <div class="num">22k+</div>
+          <div class="lbl">Total Forks</div>
+        </div>
+        <div class="stat">
+          <div class="num">100%</div>
+          <div class="lbl">Free Tier Ready</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= BOTS ================= -->
+  <section id="bots">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-kicker">⚡ Pick Your Weapon</span>
+        <h2 class="section-title">Choose Your <span class="grad">Knight</span></h2>
+        <p class="section-sub">Two battle-tested WhatsApp MD bots, both deployable to Render in minutes. Heavy hitter or lightweight scout — your call.</p>
+      </div>
+
+      <div class="bots-grid">
+
+        <!-- ============ Knightbot-MD ============ -->
+        <article class="bot-card md reveal">
+          <div class="bot-media">
+            <span class="bot-tag green">Full Bot</span>
+            <img src="assets/knightbot-md.jpg" alt="Knightbot-MD WhatsApp bot" loading="lazy" />
+            <div class="bot-title-overlay">
+              <h3>Knightbot-MD</h3>
+              <div class="bot-by">by mruniquehacker &middot; ★ 8.0k &middot; 20.4k forks</div>
+            </div>
+          </div>
+          <div class="bot-body">
+            <p class="bot-desc">A simple, powerful WhatsApp bot built on Baileys for managing groups — tag all members, mute, warn, and keep large communities under control.</p>
+            <div class="bot-meta">
+              <span class="chip hl">Multi-Device</span>
+              <span class="chip">Baileys</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">172 commits</span>
+            </div>
+            <ul class="bot-feats">
+              <li><span class="tick">✓</span> Tag all members with <code>.tagall</code> — admin-only control</li>
+              <li><span class="tick">✓</span> Games like Tic-Tac-Toe &amp; group engagement tools</li>
+              <li><span class="tick">✓</span> Text-to-speech (<code>.tts</code>) &amp; sticker maker (<code>.sticker</code>)</li>
+              <li><span class="tick">✓</span> Anti-link detection + warn system for group safety</li>
+              <li><span class="tick">✓</span> Mute / unmute, kick, promote &amp; full admin toolkit</li>
+            </ul>
+            <div class="bot-actions">
+              <a href="https://render.com/deploy?repo=https://github.com/mruniquehacker/Knightbot-MD" target="_blank" rel="noopener" class="btn btn-render full">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M5 19h14a2 2 0 0 0 2-2v-4h-2v4H5V7h4V5H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2ZM12 5h7v7h2V3h-9v2Z"/><path d="m19.7 4.3-1.4-1.4-6.3 6.3 1.4 1.4 6.3-6.3Z"/></svg>
+                Deploy to Render
+              </a>
+              <a href="https://github.com/mruniquehacker/Knightbot-MD/fork" target="_blank" rel="noopener" class="btn btn-ghost">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M5 3.25a1.75 1.75 0 1 1-3.5 0 1.75 1.75 0 0 1 3.5 0Zm2.45-.5a3.25 3.25 0 0 0-3.2-2.75 3.25 3.25 0 1 0 3.2 4.5h1.6a3.25 3.25 0 1 0 0-1.5H7.45ZM13.25 5a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5ZM9 9.75a1.75 1.75 0 1 1-3.5 0 1.75 1.75 0 0 1 3.5 0ZM7.25 7a3.25 3.25 0 0 0-2.75 3.2v.6a3.25 3.25 0 1 0 1.5-.1v-.5a1.75 1.75 0 1 1 1.75-1.75v2h1.5V8.5A3.25 3.25 0 0 0 7.25 7Z"/></svg>
+                Fork
+              </a>
+              <a href="https://github.com/mruniquehacker/Knightbot-MD" target="_blank" rel="noopener" class="btn btn-ghost">Repo</a>
+            </div>
+            <a class="bot-repo" href="https://github.com/mruniquehacker/Knightbot-MD" target="_blank" rel="noopener">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+              github.com/mruniquehacker/Knightbot-MD
+            </a>
+          </div>
+        </article>
+
+        <!-- ============ KnightBot-Mini ============ -->
+        <article class="bot-card mini reveal d1">
+          <div class="bot-media">
+            <span class="bot-tag purple">Lightweight</span>
+            <img src="assets/knightbot-mini.jpg" alt="KnightBot-Mini WhatsApp bot" loading="lazy" />
+            <div class="bot-title-overlay">
+              <h3>KnightBot-Mini</h3>
+              <div class="bot-by">Your Bot. Your Rules. &middot; ★ 1.1k &middot; 2.3k forks</div>
+            </div>
+          </div>
+          <div class="bot-body">
+            <p class="bot-desc">A fast, lightweight WhatsApp MD bot built on Baileys. Fully open source — rebrand it, customize it and make your own bot free of charge.</p>
+            <div class="bot-meta">
+              <span class="chip pp">Open Source</span>
+              <span class="chip">Baileys</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">RAM Optimized</span>
+            </div>
+            <ul class="bot-feats">
+              <li><span class="tick">✓</span> Fully open source — host anywhere, rebrand for free</li>
+              <li><span class="tick">✓</span> Customize bot image, prefix &amp; name via commands</li>
+              <li><span class="tick">✓</span> Modular commands folder for easy editing</li>
+              <li><span class="tick">✓</span> RAM-optimized media handling &amp; temp cleanup</li>
+              <li><span class="tick">✓</span> Owner tools — restart, update from ZIP &amp; more</li>
+            </ul>
+            <div class="bot-actions">
+              <a href="https://render.com/deploy?repo=https://github.com/mruniquehacker/KnightBot-Mini" target="_blank" rel="noopener" class="btn btn-render full">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M5 19h14a2 2 0 0 0 2-2v-4h-2v4H5V7h4V5H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2ZM12 5h7v7h2V3h-9v2Z"/><path d="m19.7 4.3-1.4-1.4-6.3 6.3 1.4 1.4 6.3-6.3Z"/></svg>
+                Deploy to Render
+              </a>
+              <a href="https://github.com/mruniquehacker/KnightBot-Mini/fork" target="_blank" rel="noopener" class="btn btn-ghost">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M5 3.25a1.75 1.75 0 1 1-3.5 0 1.75 1.75 0 0 1 3.5 0Zm2.45-.5a3.25 3.25 0 0 0-3.2-2.75 3.25 3.25 0 1 0 3.2 4.5h1.6a3.25 3.25 0 1 0 0-1.5H7.45ZM13.25 5a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5ZM9 9.75a1.75 1.75 0 1 1-3.5 0 1.75 1.75 0 0 1 3.5 0ZM7.25 7a3.25 3.25 0 0 0-2.75 3.2v.6a3.25 3.25 0 1 0 1.5-.1v-.5a1.75 1.75 0 1 1 1.75-1.75v2h1.5V8.5A3.25 3.25 0 0 0 7.25 7Z"/></svg>
+                Fork
+              </a>
+              <a href="https://github.com/mruniquehacker/KnightBot-Mini" target="_blank" rel="noopener" class="btn btn-ghost">Repo</a>
+            </div>
+            <a class="bot-repo" href="https://github.com/mruniquehacker/KnightBot-Mini" target="_blank" rel="noopener">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+              github.com/mruniquehacker/KnightBot-Mini
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DEPLOY GUIDE ================= -->
+  <section id="deploy">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-kicker">🚀 Launch Sequence</span>
+        <h2 class="section-title">Deploy to <span class="grad">Render</span> in 4 Steps</h2>
+        <p class="section-sub">From zero to a live WhatsApp bot in under 10 minutes — no credit card, no terminal, no pain.</p>
+      </div>
+
+      <div class="steps">
+
+        <!-- STEP 1 -->
+        <div class="step reveal">
+          <div class="step-num">1</div>
+          <div>
+            <h3>Fork the Repository</h3>
+            <p>Create your own copy of the bot on GitHub. Forking keeps the original repo untouched and gives Render a place to pull your code from. Make sure you're signed in to GitHub first.</p>
+            <div class="inner-actions">
+              <a href="https://github.com/mruniquehacker/Knightbot-MD/fork" target="_blank" rel="noopener" class="btn btn-ghost">Fork Knightbot-MD</a>
+              <a href="https://github.com/mruniquehacker/KnightBot-Mini/fork" target="_blank" rel="noopener" class="btn btn-ghost">Fork KnightBot-Mini</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="step reveal">
+          <div class="step-num">2</div>
+          <div>
+            <h3>Get Your Pair Code / Session</h3>
+            <p>The bots connect to WhatsApp through a <strong>pair code</strong> — no QR scanning needed on Render. Open the official pair-code app, enter your WhatsApp number (with country code), and approve the prompt that appears on your phone's <em>Linked Devices</em> screen.</p>
+            <div class="inner-actions">
+              <a href="https://knight-bot-paircode.onrender.com" target="_blank" rel="noopener" class="btn btn-purple">Open Pair Code App</a>
+            </div>
+            <div class="step-alt">
+              <div class="alt-row">
+                <span class="alt-label g">Knightbot-MD</span>
+                <div class="alt-text">Download the generated <code>creds.json</code> and upload it into the <code>session/</code> folder of your fork (session &rarr; Add file &rarr; Upload files &rarr; Commit).</div>
+              </div>
+              <div class="alt-row">
+                <span class="alt-label p">KnightBot-Mini</span>
+                <div class="alt-text">Copy the session string that starts with <code>KnightBot!H4...</code> — you'll paste it as the <code>SESSION_ID</code> environment variable in Step 3.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="step reveal">
+          <div class="step-num">3</div>
+          <div>
+            <h3>Hit the Deploy Button</h3>
+            <p>Click <strong>Deploy to Render</strong> on your chosen bot card above. Render opens a blueprint screen where you can review the service, name it, and — for KnightBot-Mini — paste your <code>SESSION_ID</code> session string into the environment variables before applying.</p>
+            <div class="inner-actions">
+              <a href="#bots" class="btn btn-primary">↑ Pick a Bot Card</a>
+              <a href="https://render.com/deploy?repo=https://github.com/mruniquehacker/Knightbot-MD" target="_blank" rel="noopener" class="btn btn-render">Deploy MD</a>
+              <a href="https://render.com/deploy?repo=https://github.com/mruniquehacker/KnightBot-Mini" target="_blank" rel="noopener" class="btn btn-render">Deploy Mini</a>
+            </div>
+            <div class="code-block">
+              <div class="code-head">
+                <span class="dots"><i></i><i></i><i></i></span>
+                <span class="file-name">session / render.yaml — works for both bots</span>
+                <button class="copy-btn" data-copy="render-yaml">
+                  <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"/><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"/></svg>
+                  Copy
+                </button>
+              </div>
+              <pre><code id="render-yaml"><span class="c"># Drop this file at the root of your fork (name it render.yaml)</span>
+<span class="k">services</span>:
+  - <span class="k">type</span>: web
+    <span class="k">name</span>: knightbot
+    <span class="k">runtime</span>: node
+    <span class="k">plan</span>: free
+    <span class="k">region</span>: oregon
+    <span class="k">branch</span>: main
+    <span class="k">buildCommand</span>: npm install
+    <span class="k">startCommand</span>: node index.js
+    <span class="k">autoDeploy</span>: false
+    <span class="k">envVars</span>:
+      - <span class="k">key</span>: SESSION_ID
+        <span class="k">sync</span>: false   <span class="c"># paste your KnightBot!H4… string (Mini)</span>
+      - <span class="k">key</span>: NODE_ENV
+        <span class="k">value</span>: production</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="step reveal">
+          <div class="step-num">4</div>
+          <div>
+            <h3>Go Live 🎉</h3>
+            <p>Render builds and boots your bot (<code>node index.js</code>). Watch the logs — when you see the connection success line, send <code>.menu</code> or <code>,menu</code> to your WhatsApp number and the command list drops. Keep the service on the Starter plan or higher for 24/7 uptime; free instances spin down after inactivity.</p>
+            <div class="step-alt">
+              <div class="alt-row">
+                <span class="alt-label g">Knightbot-MD</span>
+                <div class="alt-text">Commands use the <code>.</code> prefix — try <code>.menu</code>, <code>.tagall</code>, <code>.sticker</code>, <code>.tts</code>.</div>
+              </div>
+              <div class="alt-row">
+                <span class="alt-label p">KnightBot-Mini</span>
+                <div class="alt-text">Commands use the <code>,</code> prefix — try <code>,menu</code>, then customize with <code>,setprefix</code>, <code>,setname</code> and more.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GENERATOR ================= -->
+  <section id="generator">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-kicker">🔗 Power Tool</span>
+        <h2 class="section-title">Deploy Link <span class="grad">Generator</span></h2>
+        <p class="section-sub">Deploying your own fork or another repo? Paste any GitHub URL and we'll build the official Render deploy button link for it.</p>
+      </div>
+      <div class="generator reveal">
+        <div class="gen-form">
+          <input type="text" id="repoInput" placeholder="https://github.com/your-username/your-fork" spellcheck="false" autocomplete="off" />
+          <button class="btn btn-primary" id="genBtn" type="button">Generate</button>
+        </div>
+        <div class="gen-error" id="genError">⚠️ Please enter a valid GitHub repository URL (must start with https://github.com/)</div>
+        <div class="gen-result" id="genResult">
+          <div class="gen-link-label">Your Deploy Link</div>
+          <div class="gen-link" id="genLink"></div>
+          <a href="#" target="_blank" rel="noopener" class="btn btn-render" id="genGo">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M5 19h14a2 2 0 0 0 2-2v-4h-2v4H5V7h4V5H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2ZM12 5h7v7h2V3h-9v2Z"/><path d="m19.7 4.3-1.4-1.4-6.3 6.3 1.4 1.4 6.3-6.3Z"/></svg>
+            Open in Render
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ENV VARS ================= -->
+  <section id="env">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-kicker">⚙️ Configuration</span>
+        <h2 class="section-title">Environment <span class="grad">Variables</span></h2>
+        <p class="section-sub">Set these in Render under your service → Environment → Add environment variable.</p>
+      </div>
+      <div class="table-wrap reveal">
+        <table class="env-table">
+          <thead>
+            <tr>
+              <th>Variable</th>
+              <th>Bot</th>
+              <th>Required</th>
+              <th>What it does</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>SESSION_ID</code></td>
+              <td>KnightBot-Mini</td>
+              <td><span class="pill req">Required</span></td>
+              <td>Your pair-code session string starting with <code>KnightBot!H4…</code>. Without it, Mini boots into QR mode and cannot pair on Render.</td>
+            </tr>
+            <tr>
+              <td><code>creds.json</code></td>
+              <td>Knightbot-MD</td>
+              <td><span class="pill req">Required</span></td>
+              <td>Not an env var — upload this session file to the <code>session/</code> folder of your fork after generating your pair code.</td>
+            </tr>
+            <tr>
+              <td><code>NODE_ENV</code></td>
+              <td>Both</td>
+              <td><span class="pill opt">Optional</span></td>
+              <td>Set to <code>production</code> for cleaner, production-grade logging in Render logs.</td>
+            </tr>
+            <tr>
+              <td><code>Owner number</code></td>
+              <td>Both</td>
+              <td><span class="pill opt">Optional</span></td>
+              <td>Edit <code>settings.js</code> (MD) or <code>config.js</code> (Mini) in your fork to set your WhatsApp number without <code>+</code> or spaces.</td>
+            </tr>
+            <tr>
+              <td><code>PUPPETEER_SKIP_DOWNLOAD</code></td>
+              <td>KnightBot-Mini</td>
+              <td><span class="pill opt">Optional</span></td>
+              <td>Already set in code — keeps heavy Chromium downloads off your build and speeds up deploys.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHY RENDER ================= -->
+  <section id="why">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-kicker">☁️ Why Render</span>
+        <h2 class="section-title">Why <span class="grad">Render</span> for WhatsApp Bots</h2>
+        <p class="section-sub">Render makes hosting Node.js WhatsApp bots refreshingly simple.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature reveal">
+          <div class="icon">⚡</div>
+          <h4>One-Click Blueprints</h4>
+          <p>The Deploy to Render button reads your <code>render.yaml</code> and provisions the whole service automatically.</p>
+        </div>
+        <div class="feature reveal d1">
+          <div class="icon">🆓</div>
+          <h4>Generous Free Tier</h4>
+          <p>Spin up your bot on the free plan to test — no credit card required. Upgrade to Starter for 24/7 uptime.</p>
+        </div>
+        <div class="feature reveal d2">
+          <div class="icon">📊</div>
+          <h4>Live Logs &amp; Metrics</h4>
+          <p>Stream your bot's console in real time and watch CPU/RAM to catch memory issues early.</p>
+        </div>
+        <div class="feature reveal">
+          <div class="icon">🔁</div>
+          <h4>Auto-Deploy on Push</h4>
+          <p>Every commit to your fork can rebuild the bot instantly — perfect for tweaking commands.</p>
+        </div>
+        <div class="feature reveal d1">
+          <div class="icon">🔒</div>
+          <h4>Secrets Stay Secret</h4>
+          <p>Session strings live in encrypted environment variables, never in your repo.</p>
+        </div>
+        <div class="feature reveal d2">
+          <div class="icon">🌍</div>
+          <h4>Global Regions</h4>
+          <p>Oregon, Frankfurt, Singapore and more — deploy close to your users for snappy responses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-kicker">❓ Questions</span>
+        <h2 class="section-title">Frequently Asked <span class="grad">Questions</span></h2>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Is it really free to host these bots on Render?
+            <span class="chev">▾</span>
+          </button>
+          <div class="faq-a"><p>Yes — Render's free plan works for testing both bots. Free web services spin down after ~15 minutes of inactivity, which logs the bot out of WhatsApp. For an always-on bot, the Starter plan (~$7/month) keeps it online 24/7.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Do I need a pair code or can I scan a QR code on Render?
+            <span class="chev">▾</span>
+          </button>
+          <div class="faq-a"><p>Pair code, always. QR codes print to the server console where you can't scan them. Generate a pair code at the <a href="https://knight-bot-paircode.onrender.com" target="_blank" rel="noopener">official pair-code app</a>, then either upload <code>creds.json</code> to the session folder (MD) or paste the session string as <code>SESSION_ID</code> (Mini).</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            My deploy fails at build — what's wrong?
+            <span class="chev">▾</span>
+          </button>
+          <div class="faq-a"><p>Most build failures are dependency conflicts. In your Render service settings, set the build command to <code>npm install --legacy-peer-deps</code> (or <code>npm install --force</code>). Both bots already ship scripts for this in their package.json.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            The bot starts but logs "connection closed" and restarts forever.
+            <span class="chev">▾</span>
+          </button>
+          <div class="faq-a"><p>That's almost always a stale or missing session. Regenerate your pair code, replace <code>creds.json</code> in the session folder (MD) or update the <code>SESSION_ID</code> env var (Mini), then restart the service from the Render dashboard.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Can I run both bots at once on one Render account?
+            <span class="chev">▾</span>
+          </button>
+          <div class="faq-a"><p>Yes, but each needs its own WhatsApp number and its own service. Render's free plan allows multiple services — just watch total usage. Two bots = two pair codes = two numbers.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Can I rebrand KnightBot-Mini and call it my own?
+            <span class="chev">▾</span>
+          </button>
+          <div class="faq-a"><p>Yes — it's fully open source under MIT. You can modify, rebrand and host your own version free of charge, as long as you keep the original license and credit the original authors as the license requires.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Is this an official WhatsApp product? Any ban risk?
+            <span class="chev">▾</span>
+          </button>
+          <div class="faq-a"><p>No. These are educational, unofficial bots built on the Baileys library. They are not affiliated with WhatsApp, and using them may violate WhatsApp's Terms of Service and can lead to account bans. Use at your own risk — the developers accept no liability for bans or damages.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Where do I get help with the bots themselves?
+            <span class="chev">▾</span>
+          </button>
+          <div class="faq-a"><p>Join the official <a href="https://t.me/+3QhFUZHx-nhhZmY1" target="_blank" rel="noopener">Telegram group</a> or the <a href="https://whatsapp.com/channel/0029Va90zAnIHphOuO8Msp3A" target="_blank" rel="noopener">WhatsApp channel</a>, watch the <a href="https://youtu.be/-oz_u1iMgf8" target="_blank" rel="noopener">deploy tutorial on YouTube</a>, or open an issue on the repos. Ntandomods handles hosting docs; bot features belong to mruniquehacker.</p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA BAND ================= -->
+  <section class="cta-band">
+    <div class="container">
+      <h2>Ready to <span class="grad">Launch</span> Your Knight?</h2>
+      <p>Fork, pair, deploy — three moves and your bot is live on Render.</p>
+      <div class="hero-actions">
+        <a href="https://render.com/deploy?repo=https://github.com/mruniquehacker/Knightbot-MD" target="_blank" rel="noopener" class="btn btn-render">🚀 Deploy Knightbot-MD</a>
+        <a href="https://render.com/deploy?repo=https://github.com/mruniquehacker/KnightBot-Mini" target="_blank" rel="noopener" class="btn btn-render">🚀 Deploy KnightBot-Mini</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="brand">
+            <img src="assets/logo.png" alt="Ntandomods logo" />
+            <span class="brand-name">NTANDO<span>MODS</span></span>
+          </a>
+          <p>The multi-bot hosting hub for Knightbot-MD and KnightBot-Mini. Built by Ntandomods — deployable on Render, powered by Baileys.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Bots</h5>
+          <ul>
+            <li><a href="https://github.com/mruniquehacker/Knightbot-MD" target="_blank" rel="noopener">Knightbot-MD</a></li>
+            <li><a href="https://github.com/mruniquehacker/KnightBot-Mini" target="_blank" rel="noopener">KnightBot-Mini</a></li>
+            <li><a href="https://knight-bot-paircode.onrender.com" target="_blank" rel="noopener">Pair Code App</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Deploy</h5>
+          <ul>
+            <li><a href="#deploy">Step-by-Step Guide</a></li>
+            <li><a href="#generator">Link Generator</a></li>
+            <li><a href="#env">Environment Variables</a></li>
+            <li><a href="https://render.com/docs/deploy-to-render" target="_blank" rel="noopener">Render Docs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Community</h5>
+          <ul>
+            <li><a href="https://t.me/+3QhFUZHx-nhhZmY1" target="_blank" rel="noopener">Telegram</a></li>
+            <li><a href="https://whatsapp.com/channel/0029Va90zAnIHphOuO8Msp3A" target="_blank" rel="noopener">WhatsApp Channel</a></li>
+            <li><a href="https://youtu.be/-oz_u1iMgf8" target="_blank" rel="noopener">YouTube Tutorial</a></li>
+            <li><a href="https://github.com/mruniquehacker" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Ntandomods — built with <span class="heart">♥</span> for the bot community.</span>
+        <span>Bots by mruniquehacker · Hosting on Render · Powered by Baileys</span>
+      </div>
+      <div class="disclaimer">
+        ⚠️ <strong>Disclaimer:</strong> These bots are educational, unofficial projects and are not affiliated with, authorized, maintained, sponsored or endorsed by WhatsApp Inc. Using third-party bots may violate WhatsApp's Terms of Service and can result in account bans. Do not use them for spam, bulk messaging, harassment, or any illegal purposes. Use at your own risk — Ntandomods, mruniquehacker and all developers assume no liability for any misuse, damage, or bans arising from this software.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
