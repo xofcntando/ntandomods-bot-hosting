@@ -2,7 +2,7 @@
 
 A one-stop hosting site for deploying **mruniquehacker's** WhatsApp bots to [Render.com](https://render.com) with a single click.
 
-> 🌐 **Live site:** [Ntandomods Bot Hosting](https://github.com/mruniquehacker)
+> 🌐 **Live site:** https://xofcntando.github.io/ntandomods-bot-hosting/
 
 ## 🤖 Hosted Bots
 
