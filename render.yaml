@@ -1,0 +1,27 @@
+# ─────────────────────────────────────────────────────────────
+#  Ntandomods Bot Hosting — render.yaml (blueprint for THIS repo)
+#
+#  Deploys this static hosting portal to Render as a static site.
+#  One-click deploy button:
+#  https://render.com/deploy?repo=https://github.com/xofcntando/ntandomods-bot-hosting
+#
+#  ⚠ Note: this repo is also served by GitHub Pages — either host works.
+# ─────────────────────────────────────────────────────────────
+services:
+  - type: web
+    name: ntandomods-bot-hosting
+    runtime: static          # static site (pure HTML/CSS/JS)
+    staticPublishPath: ./    # files live at repo root
+    buildCommand: 'true'     # no build step needed
+    autoDeployTrigger: commit
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

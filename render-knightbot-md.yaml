@@ -1,0 +1,34 @@
+# ─────────────────────────────────────────────────────────────
+#  render.yaml for KNIGHTBOT-MD  (rename to render.yaml when adding to your fork)
+#  Bot by mruniquehacker — https://github.com/mruniquehacker/Knightbot-md
+#  Blueprint by Ntandomods — hosting guide: https://xofcntando.github.io/ntandomods-bot-hosting/
+#
+#  HOW TO USE
+#  1. Fork https://github.com/mruniquehacker/Knightbot-md
+#  2. Get your pair code → creds.json at https://knight-bot-paircode.onrender.com
+#  3. Upload creds.json into the `session/` folder of YOUR fork and commit
+#  4. Paste this file's contents at the ROOT of your fork, named render.yaml
+#  5. Click Deploy to Render: https://render.com/deploy?repo=<your-fork-url>
+#
+#  Knightbot-MD authenticates with creds.json in ./session (no SESSION_ID env var).
+#  It's a background bot (no open port), so we deploy it as a WORKER service.
+#  Build uses --legacy-peer-deps to avoid dependency-resolution failures.
+# ─────────────────────────────────────────────────────────────
+services:
+  - type: worker                     # background bot — no port needed
+    name: knightbot-md
+    runtime: node
+    plan: free
+    region: oregon
+    branch: main
+    buildCommand: npm install --legacy-peer-deps
+    startCommand: node index.js
+    autoDeployTrigger: commit        # redeploy when you push changes to your fork
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PUPPETEER_SKIP_DOWNLOAD
+        value: 'true'                # skip huge Chromium download — bots ship fallbacks
+      # Add more from the bot's config.js if needed, e.g.:
+      # - key: OWNER_NUMBER
+      #   sync: false

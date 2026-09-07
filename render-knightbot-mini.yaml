@@ -1,0 +1,35 @@
+# ─────────────────────────────────────────────────────────────
+#  render.yaml for KNIGHTBOT-MINI  (rename to render.yaml when adding to your fork)
+#  Bot by mruniquehacker — https://github.com/mruniquehacker/KnightBot-Mini
+#  Blueprint by Ntandomods — hosting guide: https://xofcntando.github.io/ntandomods-bot-hosting/
+#
+#  HOW TO USE
+#  1. Fork https://github.com/mruniquehacker/KnightBot-Mini
+#  2. Get your session string at https://knight-bot-paircode.onrender.com
+#     (starts with KnightBot!H4...)
+#  3. Paste this file's contents at the ROOT of your fork, named render.yaml
+#  4. Click Deploy to Render: https://render.com/deploy?repo=<your-fork-url>
+#  5. On the blueprint screen, paste your KnightBot!H4... string into SESSION_ID
+#
+#  KnightBot-Mini authenticates with the SESSION_ID env var
+#  (config.js: sessionID: process.env.SESSION_ID || '').
+#  It's a background bot (no open port), so we deploy it as a WORKER service.
+#  Build uses --legacy-peer-deps to avoid dependency-resolution failures.
+# ─────────────────────────────────────────────────────────────
+services:
+  - type: worker                     # background bot — no port needed
+    name: knightbot-mini
+    runtime: node
+    plan: free
+    region: oregon
+    branch: main
+    buildCommand: npm install --legacy-peer-deps
+    startCommand: node index.js
+    autoDeployTrigger: commit        # redeploy when you push changes to your fork
+    envVars:
+      - key: SESSION_ID              # your KnightBot!H4... session string
+        sync: false                  # Render prompts you for it (stays secret)
+      - key: NODE_ENV
+        value: production
+      - key: PUPPETEER_SKIP_DOWNLOAD
+        value: 'true'                # Mini already sets this, belt & suspenders
